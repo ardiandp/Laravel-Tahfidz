@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//surat
+Route::get('/alquran', [App\Http\Controllers\AlquranController::class, 'index'])->name('alquran');
