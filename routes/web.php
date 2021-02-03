@@ -23,3 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //surat
 Route::get('/alquran', [App\Http\Controllers\AlquranController::class, 'index'])->name('alquran');
+Route::get('/alquran/all', [App\Http\Controllers\AlquranController::class, 'all'])->name('alquran/all');
+
+//hadist 
+Route::get('/hadist', [App\Http\Controllers\HadistController::class, 'index'])->name('hadist');

@@ -3,36 +3,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-<h1>Daftar Surat Dalam Alquran</h1>
+<h1>Daftar Hadist -  Aplikasi Tahfidz Alquran</h1>
 @stop
 
-<!-- load css datatables-->
 @section('content')
-@section('styles')
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{url('AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
-@endsection
+<p>Welcome to this beautiful admin panel.</p>
 
-<!-- load js datatables -->
-@section('javascripts')
-<!-- DataTables -->
-<script src="{{url('AdminLTE/plugins/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{url('AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
-<script> 
-    $ ( function () {
-        $('#datatable').DataTable();
-    })
-</script>
-
-@endsection
-
-
-<p>Silahkan piliah daftar surat yang akan dibaca</p>
-
-
-<!-- awal table -->
-
-            <!-- /.card-header -->
             <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -49,14 +25,14 @@
                   </thead>
                   <tbody>
               
-              @foreach($surat as $data)
+              @foreach($hadist as $data)
                
                   <tr>
-                    <td>{{ $data->nosurat }}</td>
-                    <td>{{ $data->nama_surat }}</td>
-                    <td>{{ $data->jml_ayat }}</td>
-                    <td>{{ $data->keterangan }}</td>
-                    <td>{{ $data->kategori }}</td>
+                    <td>{{ $data->imam }}</td>
+                    <td>{{ $data->no_hadist }}</td>
+                    <td>{{ $data->text_arab }}</td>
+                    <td>{{ $data->terjemah_hadist }}</td>
+                    <td>{{ $data->title }}</td>
                   </tr>
                   @endforeach
                   </tbody>
@@ -72,21 +48,20 @@
 
                   </tfoot>
                 </table>
-                Halaman : {{ $surat->currentPage() }} <br/>
-                Jumlah Data : {{ $surat->total() }} <br/>
-                Data Per Halaman : {{ $surat->perPage() }} <br/>
+                Halaman : {{ $hadist->currentPage() }} <br/>
+                Jumlah Data : {{ $hadist->total() }} <br/>
+                Data Per Halaman : {{ $hadist->perPage() }} <br/>
  
  
-  {{ $surat->links() }}
+  {{ $hadist->links() }}
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
 
 
-
-<!-- akhir table -->
 @stop
+
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
@@ -96,5 +71,3 @@
     console.log('Hi!'); 
 </script>
 @stop
-
-

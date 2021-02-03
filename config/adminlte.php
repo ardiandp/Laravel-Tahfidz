@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Tahfidz </b>App',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -320,13 +320,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Alquran',
-                    'url'  => '#',
+                    'url'  => 'alquran',
                     'icon'    => 'fas fa-fw fa-angle-double-right',
                 ],
                
                 [
                     'text' => 'Hadist',
-                    'url'  => '#',
+                    'url'  => 'hadist',
                     'icon'    => 'fas fa-fw fa-angle-double-right',
                 ],
             ],
@@ -387,7 +387,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

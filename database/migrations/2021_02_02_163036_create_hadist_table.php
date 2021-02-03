@@ -15,7 +15,7 @@ class CreateHadistTable extends Migration
     {
         Schema::create('hadist', function (Blueprint $table) {
             $table->increments('idhadist');
-            $table->string('imama');
+            $table->string('imam');
             $table->integer('no_hadist');
             $table->text('text_arab');
             $table->text('terjemah_hadist');
